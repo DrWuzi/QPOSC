@@ -1,3 +1,6 @@
-//
-// Created by Markus on 17.12.2022.
-//
+#include <stdio.h>
+
+int main(void) {
+    printf("Welcome 1_HIF\n");
+    return 0;
+}
