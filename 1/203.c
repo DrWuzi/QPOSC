@@ -1,30 +1,49 @@
 #include <stdio.h>
 
 int main(void) {
-  // Deklariere Variablen
+
   int n;
   float x;
   double y;
   char c;
   char str[30];
 
-  // Lese Werte ein
-  printf("Bitte einen int-Wert eingeben: ");
-  scanf("%d", &n);
+  while (1) {
+    printf("Bitte einen int-Wert eingeben: ");
+    if (scanf("%d", &n) == 1) {break;}
+    printf("Ungültige Eingabe für int-Wert!\n");
+    while (getchar() != '\n') { }
+  }
 
-  printf("Bitte einen float-Wert eingeben: ");
-  scanf("%f", &x);
+  while (1) {
+    printf("Bitte einen float-Wert eingeben: ");
+    if (scanf("%f", &x) == 1) {break;}
+    printf("Ungültige Eingabe für float-Wert!\n");
+    while (getchar() != '\n') { }
+  }
 
-  printf("Bitte einen double-Wert eingeben: ");
-  scanf("%lf", &y);
+  while (1) {
+    printf("Bitte einen double-Wert eingeben: ");
+    if (scanf("%lf", &y) == 1) {break;}
+    printf("Ungültige Eingabe für double-Wert!\n");
+    while (getchar() != '\n') { }
+  }
 
-  printf("Bitte einen char-Wert eingeben: ");
-  scanf(" %c", &c);  // Hinweis: Leerzeichen vor %c, um eventuelle vorherige Leerzeichen zu ignorieren
+  while (1) {
+    printf("Bitte einen char-Wert eingeben: ");
+    if (scanf(" %c", &c) == 1) {break;}
+    printf("Ungültige Eingabe für char-Wert!\n");
+        while (getchar() != '\n') { }
+  }
+  
+  while (1) {
+    printf("Bitte eine Zeichenkette eingeben: ");
+    if (scanf("%s", str) == 1) {break;}
+    printf("Ungültige Eingabe für Zeichenkette!\n");
+    while (getchar() != '\n') { }
+  }
 
-  printf("Bitte einen Zeichenkette eingeben: ");
-  scanf("%s", str);
 
-  // Gib Variablen aus
   printf("n = %d\n", n);
   printf("x = %f\n", x);
   printf("y = %lf\n", y);
